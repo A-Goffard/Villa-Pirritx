@@ -1,0 +1,89 @@
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    width: 15rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--darkPurple);
+    border-radius: 0.2rem;
+    background-color: var(--lightPink);
+    font-size: 1rem;
+  }
+  textarea {
+    width: 40rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--darkPurple);
+    border-radius: 0.2rem;
+    background-color: var(--lightPink);
+    font-size: 1rem;
+  }
+
+ 
+  .pares {
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pares2 {
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    transition: background-color 0.3s;
+  }
+  
+  button:disabled {
+    background-color: var(--lightPurple);
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: var(--darkPurple);
+  }
+  
+  .confirmation-message {
+    margin-top: 10px;
+    padding: 10px;
+    color: var(--darkPurple);
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid var(--lightPurple);
+    border-radius: 4px;
+  }
+
+  form {
+    max-width: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+button{
+  margin: 1rem;
+}
+@media (max-width: 815px) {
+
+  textarea {
+    max-width: 30rem;
+  }
+
+}
+
+/* Pantallas muy pequeñas (por ejemplo, móviles pequeños) */
+@media (max-width: 560px) {
+  textarea {
+    max-width: 15rem;
+  }
+}

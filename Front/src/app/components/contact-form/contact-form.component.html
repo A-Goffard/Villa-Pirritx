@@ -1,0 +1,63 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <div class="pares">
+      <label for="name">Nombre:</label>
+      <input id="name" formControlName="name" required />
+      <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+        <small>El nombre es obligatorio.</small>
+      </div>
+    </div>
+
+    <div class="pares">
+      <label for="firstSurname">Primer Apellido:</label>
+      <input id="firstSurname" formControlName="firstSurname" required />
+      <div *ngIf="contactForm.get('firstSurname')?.invalid && contactForm.get('firstSurname')?.touched">
+        <small>El primer apellido es obligatorio.</small>
+      </div>
+    </div>
+
+    <div class="pares">
+      <label for="secondSurname">Segundo Apellido:</label>
+      <input id="secondSurname" formControlName="secondSurname" />
+    </div>
+
+    <div class="pares">
+      <label for="email">Correo Electrónico:</label>
+      <input id="email" formControlName="email" required type="email" />
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+        <small>Debe ingresar un correo electrónico válido.</small>
+      </div>
+    </div>
+
+    <div class="pares">
+      <label for="phone">Teléfono de Contacto:</label>
+      <input id="phone" formControlName="phone" type="tel" />  
+    </div>
+
+    <div class="pares">
+      <label for="subject">Asunto:</label>
+      <select id="subject" formControlName="subject" required>
+        <option value="adoptar">Adoptar</option>
+        <option value="donar">Donar</option>
+        <option value="apadrinar">Apadrinar</option>
+        <option value="voluntario">Voluntario</option>
+        <option value="casa_de_acogida">Casa de Acogida</option>
+        <option value="viaje_solidario">Viaje Solidario</option>
+        <option value="otros">Otros</option>
+      </select>
+    </div>
+
+    <div class="pares2">
+      <label for="observations">Observaciones:</label>
+      <textarea id="observations" formControlName="observations" required></textarea>
+      <div *ngIf="contactForm.get('observations')?.invalid && contactForm.get('observations')?.touched">
+        <small>Las observaciones son obligatorias.</small>
+      </div>
+
+      <button class="btnMorado" type="submit" [disabled]="contactForm.invalid">Enviar</button>
+    </div>
+    <!-- Mensaje de confirmación -->
+    <div *ngIf="messageSent" class="confirmation-message">
+      ¡Mensaje enviado con éxito!
+    </div>
+  </form>
+  

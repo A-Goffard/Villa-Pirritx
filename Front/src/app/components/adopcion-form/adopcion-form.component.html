@@ -1,0 +1,90 @@
+<div class="centre">
+  <form [formGroup]="adopciontForm" (ngSubmit)="onSubmit()">
+    <div class="pares">
+      <label for="nombreanimal">Nombre:</label>
+      <input id="nombreanimal" formControlName="nombreanimal" required />
+ 
+    </div>
+
+    <div class="pares">
+      <label for="tipoanimal">Tipo de animal:</label>
+      <select id="tipoanimal" formControlName="tipoanimal" required>
+        <option value="gato">Gato</option>
+        <option value="perro">Perro</option>
+        <option value="otro">Otro</option>
+      </select>
+      <div *ngIf="adopciontForm.get('tipoanimal')?.invalid && adopciontForm.get('tipoanimal')?.touched">
+        <small>El tipo de animal es obligatorio.</small>
+      </div>
+    </div>
+
+    <div class="pares">
+      <label for="edadanimal">Edad:</label>
+      <input id="edadanimal" formControlName="edadanimal" />
+    </div>
+
+    <div class="pares">
+      <label for="sexoanimal">Sexo:</label>
+      <select id="sexoanimal" formControlName="sexoanimal" required>
+        <option value="macho">Macho</option>
+        <option value="hembra">Hembra</option>
+      </select>
+      <div *ngIf="adopciontForm.get('sexoanimal')?.invalid && adopciontForm.get('sexoanimal')?.touched">
+        <small>El sexo del animal es obligatorio.</small>
+      </div>
+    </div>
+
+    <div class="pares">
+      <label for="tiemporefugio">Tiempo que lleva en el refugio:</label>
+      <input id="tiemporefugio" formControlName="tiemporefugio" type="text" />
+    </div>
+
+    <div class="pares">
+      <label for="urgenciaanimal">Urgencia:</label>
+      <select id="urgenciaanimal" formControlName="urgenciaanimal" required>
+        <option value="alta">Alta</option>
+        <option value="media">Media</option>
+        <option value="baja">Baja</option>
+      </select>
+    </div>
+
+    <div class="descripcionanimal">
+      <label for="descripcionanimal">Descripción:</label>
+      <textarea id="descripcionanimal" formControlName="descripcionanimal"></textarea>
+      <div *ngIf="adopciontForm.get('descripcionanimal')?.invalid && adopciontForm.get('descripcionanimal')?.touched">
+        <small>La descripción del animal es obligatoria.</small>
+      </div>
+
+    </div>
+
+    <div class="pares">
+      <label for="imagenesanimal">Subir Imágenes:</label>
+      <input 
+        id="imagenesanimal" 
+        type="file" 
+        (change)="onFilesChange($event)" 
+        accept="image/*" 
+        multiple 
+      />
+      <div *ngIf="imagePreviews.length > 0">
+        <p>Imágenes seleccionadas:</p>
+        <div class="image-preview-container">
+          <img *ngFor="let preview of imagePreviews" [src]="preview" alt="Previsualización de imagen" width="150" />
+        </div>
+      </div>
+    </div>
+
+    <div class="pares2">
+      <label for="observacionesanimal">Observaciones:</label>
+      <textarea id="observacionesanimal" formControlName="observacionesanimal"></textarea>
+
+      <button class="btnMorado" type="submit" [disabled]="adopciontForm.invalid">Enviar</button>
+
+    </div>
+
+    <!-- Mensaje de confirmación -->
+    <div *ngIf="messageSent" class="confirmation-message">
+      Animalito puesto en adopción
+    </div>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+# Ignorar el entorno virtual
+.venv/
+venv/
+env/
+env.bak/
+
+# Ignorar archivos de Python
+__pycache__/
+*.py[cod]
+
+# Ignorar archivos de base de datos
+VillaPirritx/db.sqlite3
+
+# Ignorar archivos de configuración de IDE
+*.idea/
+*.vscode/
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de caché
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos de migraciones
+*/migrations/*.py
+*/migrations/*.pyc
+*/migrations/__init__.py
+
+# Ignorar archivos de configuración de pruebas
+.coverage
+*.cover
+
+# Ignorar archivos de configuraciones de sistema
+.DS_Store
+Thumbs.db

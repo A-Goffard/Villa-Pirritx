@@ -1,0 +1,19 @@
+<div class="eslogan">
+  <p>LAS OPORTUNIDADES SOLO PASAN UNA VEZ EN LA VIDA, VEN Y SALVA UNA VIDA</p>
+</div>
+<nav class="navbar">
+
+  <div class="navbar-brand">
+    <button class="hamburger" (click)="toggleMenu()"><img class="patita" src="iconos/patita.png" alt=""></button>
+  </div>
+  <ul [class.active]="isMenuOpen" class="navbar-links">
+    <li><a routerLink="/home" (click)="closeMenu()">Inicio</a></li>
+    <li><a routerLink="/about" (click)="closeMenu()">Quienes Somos</a></li>
+    <li><a routerLink="/colabora" (click)="closeMenu()">Colabora</a></li>
+    <li><a routerLink="/adopcion" (click)="closeMenu()">Adopta</a></li>
+    <li><a routerLink="/proyecto" (click)="closeMenu()">Nuestro Proyecto</a></li>
+    <li><a routerLink="/eventos" (click)="closeMenu()">Eventos</a></li>
+    <li><a routerLink="/contacto" (click)="closeMenu()">Contacta</a></li>
+    <li><a routerLink="/gestion-adopcion" (click)="closeMenu()">De interés</a></li>
+  </ul>
+</nav>

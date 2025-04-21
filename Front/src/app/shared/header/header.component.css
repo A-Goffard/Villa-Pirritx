@@ -1,0 +1,85 @@
+/* Estilos para el eslogan */
+.eslogan {
+  padding: 0.1rem 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightPink);
+  text-align: center;
+}
+
+p{
+margin: 0.2rem;
+}
+.navbar { 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+padding: 1rem; 
+background: var(--white); 
+}
+
+.navbar-brand { 
+font-size: 1.2rem; 
+
+}
+
+.navbar-links { 
+list-style: none; 
+padding: 0.3rem 1rem; 
+margin: 0; 
+display: flex; 
+gap: 1rem; 
+transition: transform 0.3s; 
+}
+
+.navbar-links li { 
+padding: 0.3rem 0.5rem;
+color: var(--darkPurple); 
+text-decoration: none; 
+}
+
+.patita {
+max-width: 2rem;
+}
+
+.navbar-links li:hover { 
+padding: 0.3rem 0.5rem;
+background-color: var(--lightPink);
+border-radius: 1rem;
+}
+
+.navbar-links li a { 
+padding: 0.3rem 0.5rem;
+color: var(--darkPurple); 
+text-decoration: none; 
+}
+
+/* Estilos para el menú hamburguesa */
+.hamburger { 
+display: none; 
+cursor: pointer; 
+}
+
+@media (max-width: 768px) {
+.navbar-links { 
+  flex-direction: column; 
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  background: var(--lightPink); 
+  padding: 1rem;
+  transform: translateX(100%);
+}
+.navbar-links.active { 
+  transform: translateX(0); }
+.hamburger { 
+  z-index: 100;
+  position: fixed; 
+  top: 0.5rem; 
+  right: 0.5rem; 
+  background-color: transparent;
+  border: none;
+  display: inline-block; 
+}
+}
