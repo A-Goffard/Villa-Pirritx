@@ -1,0 +1,99 @@
+/* .bloque_1{
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.bloque_2{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(243, 217, 255);
+    display: flex;
+    flex-direction: column;
+}
+
+.texto{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+h1{
+    padding: 2rem;
+}
+
+.caja_button{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+button {
+    background: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  button:hover {
+    background: #4a148c;
+  }
+
+  
+.dog-card-container {
+    text-align: center;
+    padding: 3rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .dog-cards {
+    display: flex;
+    margin: 2rem;
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+
+  .dog-card {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    background: #fbe4ff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .dog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 0.3rem;
+  }
+  
+
+ */

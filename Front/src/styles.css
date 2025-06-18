@@ -1,0 +1,171 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --lightPurple: #F3D9FF;
+    --middlePurple: #6a1b9a;
+    --darkPurple: #4f1b6b;
+    --pink: #c823cf;
+    --yellow: #eae954;
+    --green: #84e934;
+    --blue: #8de7e9;
+    --lightPink: #F3D9FF;
+}
+
+h1 {
+    color: var(--darkPurple);
+}
+h2{
+    margin: 1rem;
+}
+
+h3 {
+    margin: 1rem;
+    font-weight: 500;
+
+}
+p {
+    margin: 0.3rem;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 0.7rem;
+}
+
+.textCentre{
+    text-align: center;
+}
+
+.centre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card{
+    max-width: 25rem;
+}
+
+.card2{
+    max-width: 35rem;
+}
+
+.cards{
+    max-width: 20rem;
+    background-color: var(--lightPurple);
+    border-radius: 0.7rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+
+
+.redonda{
+    max-width: 10rem;
+    border-radius: 100%;
+}
+
+.ImgBR{
+    max-width: 90%;
+    border-radius: 0.7rem;
+    margin: 1rem;
+}
+
+.logoPeq{
+    max-width: 4.5rem;
+}
+
+.horizontalSpaceAround{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.horizontal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0.5rem;
+}
+
+.capaBlanca{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--white);
+    padding: 2rem;
+}
+
+.imagen{
+    max-width: 20rem;
+    width: 100%;
+}
+.capaRosa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: var(--lightPink);
+    padding: 2rem;
+
+}
+
+.miniRosa{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lightPink);
+}
+
+.btnRosa{
+    background-color: var(--lightPink);
+    padding: 0.3rem 1rem;
+    border-radius: 06rem;
+}
+
+.btnMorado{
+    color: var(--white);
+    background-color: var(--darkPurple);
+    padding: 0.3rem 1rem;
+    border-radius: 06rem;
+    margin: 0.3rem;
+}
+
+.icono {
+    max-width: 1rem;
+}
+
+@media (max-width: 400px) {
+
+    .capaBlanca{
+
+        padding: 0.5rem;
+    }
+
+    .capaRosa{
+
+        padding: 0.5rem;
+    
+    }
+
+        }
