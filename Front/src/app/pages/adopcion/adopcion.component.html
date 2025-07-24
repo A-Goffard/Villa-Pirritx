@@ -16,15 +16,56 @@ En lugar de apoyar la compra de animales, que a menudo fomenta la cría irrespon
 
 <div class="capaBlanca">
   <h1>Esperando un hogar</h1>
-  <div class="horizontalSpaceAround">
-    <div class="cards centre" *ngFor="let dog of dogs">
-        <img [src]="dog.image" alt="{{ dog.name }}" />
-        <h3>{{ dog.name }}</h3>
-        <p>{{ dog.breed }}</p>
-        <p>{{ dog.age }} años</p>
+  
+  <!-- Filtros básicos -->
+  <div class="filtros" style="margin-bottom: 2rem; text-align: center;">
+    <button class="btnMorado" (click)="cargarAnimales()">Todos</button>
+    <button class="btnRosa" (click)="filtrarPorUrgencia()">🚨 Urgentes</button>
+    <button class="btnMorado" (click)="filtrarPorTipo('perro')">🐕 Perros</button>
+    <button class="btnMorado" (click)="filtrarPorTipo('gato')">🐱 Gatos</button>
+  </div>
+
+  <!-- Estado de carga -->
+  <div *ngIf="loading" class="centre" style="padding: 2rem;">
+    <p>Cargando animales... 🐾</p>
+  </div>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="error" class="centre" style="padding: 2rem; color: red;">
+    <p>{{ error }}</p>
+  </div>
+
+  <!-- Lista de animales -->
+  <div class="horizontalSpaceAround" *ngIf="!loading">
+    <div class="cards centre" *ngFor="let animal of animales">
+        <!-- Usar foto_principal del animal -->
+        <img [src]="animal.foto_principal || './mix/perro_ejem.jpg'" 
+             [alt]="animal.nombre" 
+             style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;" />
+        
+        <!-- Badge de urgente -->
+        <div *ngIf="animal.urgente" 
+             style="position: absolute; top: 10px; right: 10px; background: red; color: white; padding: 5px; border-radius: 5px; font-size: 12px;">
+          🚨 URGENTE
+        </div>
+        
+        <h3>{{ animal.nombre }}</h3>
+        <p><strong>{{ animal.raza }}</strong></p>
+        <p>{{ animal.edad }} años</p>
+        
+        <!-- Información adicional si está disponible -->
+        <div *ngIf="animal.tamano" style="font-size: 14px; color: #666;">
+          <p>Tamaño: {{ animal.tamano }}</p>
+        </div>
+        
+        <div *ngIf="animal.estado_adopcion" style="font-size: 12px; padding: 3px 8px; border-radius: 10px; margin: 5px 0;"
+             [style.background-color]="animal.estado_adopcion === 'disponible' ? '#90EE90' : '#FFB6C1'">
+          {{ animal.estado_adopcion }}
+        </div>
+        
         <div class="centre">
-        <button class="btnMorado" (click)="viewDetails(dog)">Conóceme</button>
-        <button class="btnMorado" (click)="shareDetails(dog)">Difundir</button>    
+          <button class="btnMorado" (click)="viewDetails(animal)">Conóceme</button>
+          <button class="btnMorado" (click)="shareDetails(animal)">Difundir</button>    
         </div>
         
       </div>
