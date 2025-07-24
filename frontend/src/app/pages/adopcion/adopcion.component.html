@@ -1,0 +1,32 @@
+<div class="capaBlanca">
+  <img class="imagen"  src="./logos/logo.png" alt="">
+    <img class="imagen"  src="./mix/familia_perro.png" alt="">
+</div>
+
+<div class="capaRosa textCentre">
+  <h2>
+        Adopta, forma una nueva familia
+    </h2>
+    <p>
+        Adoptar un animal es una oportunidad para salvar una vida y darle una segunda oportunidad Cada año, miles de perros y gatos son abandonados y esperan en refugios un hogar lleno de amor Al adoptar, no solo estás brindando cariño y seguridad a un animal que lo necesita, sino también contribuyendo a reducir la sobrepoblación y el abandono
+Los animales en adopción suelen haber pasado por situaciones difíciles y al llevarlos a casa les ofreces estabilidad y una vida mejor Además, la mayoría ya están vacunados y esterilizados, lo que facilita su integración Adopción significa amor, compañía incondicional y la satisfacción de saber que has cambiado su vida para siempre
+En lugar de apoyar la compra de animales, que a menudo fomenta la cría irresponsable, al adoptar optas por una opción ética y responsable Dándole a un animal en refugio una segunda oportunidad, estás tomando una decisión que transforma tanto su vida como la tuya
+    </p>
+</div>
+
+<div class="capaBlanca">
+  <h1>Esperando un hogar</h1>
+  <div class="horizontalSpaceAround">
+    <div class="cards centre" *ngFor="let dog of dogs">
+        <img [src]="dog.image" alt="{{ dog.name }}" />
+        <h3>{{ dog.name }}</h3>
+        <p>{{ dog.breed }}</p>
+        <p>{{ dog.age }} años</p>
+        <div class="centre">
+        <button class="btnMorado" (click)="viewDetails(dog)">Conóceme</button>
+        <button class="btnMorado" (click)="shareDetails(dog)">Difundir</button>    
+        </div>
+        
+      </div>
+    </div>
+  </div>
